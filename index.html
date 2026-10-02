@@ -11,8 +11,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIM Lab | IISc Bangalore</title>
-    <meta name="description" content="Artificial Intelligence and Cyber-Physical Systems Lab at IISc">
+    <title>Edge Intelligence Lab | IISc Bangalore</title>
+    <meta name="description" content="Edge Intelligence Lab at IISc Bangalore: edge and embedded AI, efficient AI, and distributed and collaborative intelligence for real-world cyber-physical systems.">
     
     <link rel="icon" href="assets/img/favicon.png">
     
@@ -22,6 +22,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Page-specific additions: no changes to styles.css are required. -->
+    <style>
+        .edge-hero-tagline { color: #d9eaf8; font-size: clamp(1.1rem, 2.5vw, 1.5rem); margin-bottom: 20px; }
+        .hero { padding-bottom: 60px; }
+        .hero-cta { flex-wrap: wrap; }
+        .edge-vision-intro { max-width: 900px; margin: 0 auto 32px; text-align: center; font-size: 1.05rem; }
+        .edge-research-figure { max-width: 1000px; margin: 0 auto; }
+        .edge-research-animation { display: block; width: 100%; height: auto; aspect-ratio: 1; background: white; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); }
+        .edge-research-animation img { display: block; width: 100%; height: auto; }
+        .edge-research-figure figcaption { text-align: center; margin-top: 16px; }
+        .edge-figure-controls { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin-top: 18px; }
+        #edge-animation-buttons:not([hidden]) { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .edge-figure-controls button, .edge-figure-controls a { font: inherit; font-size: .9rem; padding: 10px 16px; border: 1px solid var(--primary); border-radius: 8px; background: var(--card-bg); color: var(--text-dark); text-decoration: none; cursor: pointer; }
+        .edge-figure-controls button:disabled { opacity: .55; cursor: default; }
+        .edge-figure-controls button:focus-visible, .edge-figure-controls a:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+        .edge-pillar-blue { --pillar-color: #3182b2; }
+        .edge-pillar-gold { --pillar-color: #aa7c21; }
+        .edge-pillar-green { --pillar-color: #38856b; }
+        #themes .feature__item { border-top: 4px solid var(--pillar-color); }
+        #themes .feature__item-teaser i, #themes .feature__item:hover .feature__item-teaser i { color: var(--pillar-color); }
+        #themes .archive__item-excerpt p + p { margin-top: 12px; }
+        [data-theme="dark"] .edge-pillar-blue { --pillar-color: #75c5ef; }
+        [data-theme="dark"] .edge-pillar-gold { --pillar-color: #eac66b; }
+        [data-theme="dark"] .edge-pillar-green { --pillar-color: #8fd0aa; }
+        @media (max-width: 600px) {
+            .edge-vision .section-title h2 { font-size: 1.8rem; }
+            .edge-vision-intro { font-size: .95rem; text-align: left; }
+            .edge-research-animation { border-radius: 8px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .feature__item, .feature__item-teaser i { animation: none !important; transition: none !important; }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -29,7 +63,7 @@
             <div class="nav-brand">
                 <img src="assets/img/iisc-logo.png" alt="IISc Logo" class="nav-logo">
                 <a href="#home" class="lab-logo-text">
-                    <span class="brand-aim">AIM</span><span class="brand-lab">Lab</span>
+                    <span class="brand-aim">EDGE</span><span class="brand-lab">Lab</span>
                 </a>
             </div>
             <div class="nav-links">
@@ -62,39 +96,21 @@
         <canvas id="network-graph"></canvas>  
         <div class="hero-particles"></div>
         <div class="hero-content">
-            <div class="hero-brand">
-                <span class="hero-aim">AIM</span><span class="hero-lab">Lab</span>
+            <div class="hero-brand" aria-hidden="true">
+                <span class="hero-aim">EDGE</span><span class="hero-lab">Lab</span>
             </div>
+            <h1>Edge Intelligence Lab</h1>
+            <p class="edge-hero-tagline">Intelligent, Efficient, and Distributed AI at the Edge</p>
+            <p class="hero-subtitle">Department of Cyber Physical Systems &amp;<br>Robert Bosch Centre for Cyber-Physical Systems, IISc Bangalore</p>
             
-            <h1>Artificial Intelligence &<br>Cyber-Physical Systems Lab</h1>
-            <p class="hero-subtitle">Robert Bosch Centre for Cyber-Physical Systems, IISc Bangalore</p>
-            
-            <div class="typewriter-container">
-                <span class="prefix">Innovating in:</span>
-                <span id="typewriter-text" class="typewriter-text"></span>
-                <span class="typewriter-cursor">|</span>
-            </div>
-
-            <div class="hero-cta">
+<div class="hero-cta">
                 <a href="#themes" class="btn btn-primary">
-                    Explore Research <i class="ri-arrow-down-line"></i>
+                    Explore Research <i class="ri-arrow-down-line" aria-hidden="true"></i>
                 </a>
+                <a href="#join" class="btn btn-outline">Join the Lab</a>
             </div>
 
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <div class="hero-stat-number stat-number" data-count="15">0</div>
-                    <div class="hero-stat-label">Publications</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="hero-stat-number stat-number" data-count="10">0</div>
-                    <div class="hero-stat-label">Projects</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="hero-stat-number stat-number" data-count="20">0</div>
-                    <div class="hero-stat-label">Members</div>
-                </div>
-            </div>
+
         </div>
         <div class="hero-scroll-indicator">
             <a href="#about">
@@ -103,101 +119,67 @@
         </div>
     </section>
 
-    <section id="about" class="section-padding">
+    <section id="about" class="section-padding edge-vision">
         <div class="container">
             <div class="section-title">
-                <h2>Our Mission</h2>
+                <h2>Edge Intelligence: Algorithms to Impact</h2>
             </div>
-
-            <div class="about-wrapper">
-                <div class="about-image">
-                    <div class="interactive-image-container">
-                        <div class="dynamic-border"></div>
-                        <img src="assets/img/main-1.jpg" alt="AIM Lab" class="about-main-image" onerror="this.src='https://placehold.co/800x600?text=AIM+Lab+Research'">
-                        <div class="image-overlay">
-                            <div class="image-caption">
-                                <i class="ri-lightbulb-flash-line"></i>
-                                <span>Innovating for Sustainability</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-content">
-                    <div class="info-card main-info-card">
-                        <div class="info-card-content">
-                            <h3>Data-Driven Sustainability</h3>
-                            <p>We focus on the intersection of <strong>Machine Learning</strong>, <strong>Internet of Things (IoT)</strong>, and <strong>Sustainability</strong>. Our goal is to build data-driven solutions that solve real-world challenges in smart built environments.</p>
-                            
-                            <div class="tags">
-                                <span class="tag interactive-tag">Machine Learning</span>
-                                <span class="tag interactive-tag">IoT</span>
-                                <span class="tag interactive-tag">Smart Cities</span>
-                                <span class="tag interactive-tag">Sustainability</span>
-                                <span class="tag interactive-tag">Energy Analytics</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <p class="edge-vision-intro">The Edge Intelligence Lab develops intelligent, efficient, and distributed AI systems that operate closer to where data is generated. Our research spans edge and embedded AI, efficient AI, and distributed and collaborative intelligence, with applications in energy and buildings, cities and the environment, mobility, and agriculture.</p>
+            <figure class="edge-research-figure">
+                <object id="edge-research-animation" class="edge-research-animation"
+                        data="assets/img/edge-lab-animation.svg" type="image/svg+xml"
+                        width="1254" height="1254"
+                        aria-label="Edge Intelligence Lab research ecosystem" aria-describedby="edge-figure-caption">
+                    <img src="assets/img/edge-lab-animation.svg" width="1254" height="1254"
+                         alt="Edge Intelligence Lab: Edge and Embedded AI, Efficient AI, and Distributed and Collaborative AI; research subareas; applications in energy, buildings, cities, environment, agriculture, and mobility.">
+                </object>
+                <figcaption id="edge-figure-caption">From intelligence at the source to real-world impact.</figcaption>
+            </figure>
+            <div class="edge-figure-controls" role="group" aria-label="Research animation controls">
+                <span id="edge-animation-buttons" hidden>
+                    <button type="button" id="edge-animation-pause" aria-pressed="false">Pause animation</button>
+                    <button type="button" id="edge-animation-replay">Replay</button>
+                    <button type="button" id="edge-animation-complete">Show complete figure</button>
+                </span>
+                <a href="assets/img/edge-lab-animation.svg" target="_blank" rel="noopener">Open larger figure <i class="ri-external-link-line" aria-hidden="true"></i></a>
             </div>
         </div>
     </section>
 
     <section id="themes" class="section-padding bg-alt">
         <div class="container">
-            <div class="section-title">
-                <h2>Research Areas</h2>
-            </div>
-
+            <div class="section-title"><h2>Three Research Pillars</h2></div>
             <div class="feature__wrapper">
-                <div class="feature__item">
-                    <div class="feature__item-teaser"><i class="fas fa-chart-line"></i></div>
+                <div class="feature__item edge-pillar-blue">
+                    <div class="feature__item-teaser"><i class="fas fa-microchip" aria-hidden="true"></i></div>
                     <div class="feature__item-body">
-                        <h2 class="archive__item-title">Data Science</h2>
-                        <div class="archive__item-excerpt"><p>Developing advanced machine learning and deep learning models for time-series analysis, prediction, and anomaly detection.</p></div>
+                        <h2 class="archive__item-title">Edge / Embedded AI</h2>
+                        <div class="archive__item-excerpt"><p><strong>Intelligence at the Source</strong></p><p>TinyML · On-sensor AI · Embedded AI · Edge Agents · Real-time AI Systems</p></div>
                     </div>
                 </div>
-                <div class="feature__item">
-                    <div class="feature__item-teaser"><i class="fas fa-bolt"></i></div>
+                <div class="feature__item edge-pillar-gold">
+                    <div class="feature__item-teaser"><i class="fas fa-leaf" aria-hidden="true"></i></div>
                     <div class="feature__item-body">
-                        <h2 class="archive__item-title">Energy Sustainability</h2>
-                        <div class="archive__item-excerpt"><p>Focusing on smart building energy efficiency, benchmarking, and fault detection and diagnosis (FDD) for HVAC systems.</p></div>
+                        <h2 class="archive__item-title">Efficient AI</h2>
+                        <div class="archive__item-excerpt"><p><strong>More Intelligence with Less Resources</strong></p><p>Model Compression · Quantization · Pruning · Energy-efficient Inference · Small Foundation Models · Efficient Training &amp; Deployment</p></div>
                     </div>
                 </div>
-                <div class="feature__item">
-                    <div class="feature__item-teaser"><i class="fas fa-microchip"></i></div>
+                <div class="feature__item edge-pillar-green">
+                    <div class="feature__item-teaser"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
                     <div class="feature__item-body">
-                        <h2 class="archive__item-title">IoT & CPS</h2>
-                        <div class="archive__item-excerpt"><p>Bridging the gap between physical sensors and digital analysis through Cyber-Physical Systems and Internet of Things.</p></div>
+                        <h2 class="archive__item-title">Distributed &amp; Collaborative AI</h2>
+                        <div class="archive__item-excerpt"><p><strong>Learning Together, Everywhere</strong></p><p>Federated Learning · Distributed Learning · Edge–Cloud Collaboration · Privacy-preserving AI · Multi-device Intelligence · Continual &amp; Lifelong Learning</p></div>
                     </div>
                 </div>
             </div>
-            
-            <div class="section-subtitle">
-                <h3>Core Methodologies</h3>
-                <p>We primarily leverage <strong>smart meter time series</strong> and opportunistic data sources.</p>
-            </div>
+            <div class="section-subtitle"><h3>Research Topics</h3><p>Algorithms, models, and systems for intelligence across resource-constrained and distributed platforms.</p></div>
             <div class="methodology-grid">
-                <div class="method-card">
-                    <div class="method-icon"><img src="assets/img/EA.png" alt="Energy Monitoring" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><i class="fas fa-search-location fallback-icon" style="display:none;"></i></div>
-                    <h4>Energy Monitoring</h4>
-                </div>
-                <div class="method-card">
-                    <div class="method-icon"><img src="assets/img/EB.png" alt="Energy Benchmarking" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><i class="fas fa-balance-scale fallback-icon" style="display:none;"></i></div>
-                    <h4>Energy Benchmarking</h4>
-                </div>
-                <div class="method-card">
-                    <div class="method-icon"><img src="assets/img/PA.png" alt="Energy Prediction" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><i class="fas fa-chart-area fallback-icon" style="display:none;"></i></div>
-                    <h4>Energy Prediction</h4>
-                </div>
-                <div class="method-card">
-                    <div class="method-icon"><img src="assets/img/AD.png" alt="Anomaly Detection" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><i class="fas fa-exclamation-triangle fallback-icon" style="display:none;"></i></div>
-                    <h4>Anomaly Detection</h4>
-                </div>
-                <div class="method-card">
-                    <div class="method-icon"><img src="assets/img/fault.png" alt="FDD" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><i class="fas fa-tools fallback-icon" style="display:none;"></i></div>
-                    <h4>Fault Detection (FDD)</h4>
-                </div>
+                <div class="method-card"><div class="method-icon"><i class="fas fa-microchip" aria-hidden="true"></i></div><h4>Edge AI Systems</h4></div>
+                <div class="method-card"><div class="method-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div><h4>Time Series Foundation Models</h4></div>
+                <div class="method-card"><div class="method-icon"><i class="fas fa-share-nodes" aria-hidden="true"></i></div><h4>Federated &amp; Distributed Learning</h4></div>
+                <div class="method-card"><div class="method-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div><h4>Efficient Foundation Models</h4></div>
+                <div class="method-card"><div class="method-icon"><i class="fas fa-camera" aria-hidden="true"></i></div><h4>Embedded &amp; In-Sensor AI</h4></div>
+                <div class="method-card"><div class="method-icon"><i class="fas fa-robot" aria-hidden="true"></i></div><h4>Agentic AI at the Edge</h4></div>
             </div>
         </div>
     </section>
@@ -540,7 +522,7 @@ Therefore, in this paper, we analyze the applicability and performance of Time S
             </div>
             <div class="join-wrapper">
                 <div class="join-info">
-                    <p class="join-intro">We are actively looking for highly motivated candidates to join the <strong>AIM Lab</strong> at RBCCPS, IISc.</p>
+                    <p class="join-intro">We are actively looking for highly motivated candidates to join the <strong>Edge Intelligence Lab</strong> at RBCCPS, IISc.</p>
                     <div class="opening-card">
                         <h4><i class="fas fa-laptop-code"></i> Project Staff / Research Associates</h4>
                         <p>We frequently look for project staff to assist with ongoing research.</p>
@@ -629,8 +611,8 @@ Therefore, in this paper, we analyze the applicability and performance of Time S
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>AIM-Lab</h3>
-                    <p>Artificial Intelligence & Cyber-Physical Systems Lab.</p>
+                    <h3>Edge Intelligence Lab</h3>
+                    <p>Intelligent, Efficient, and Distributed AI at the Edge.</p>
                     <p>RBCCPS, Indian Institute of Science.</p>
                 </div>
                 <div class="footer-column">
@@ -648,11 +630,70 @@ Therefore, in this paper, we analyze the applicability and performance of Time S
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2026 AIM-Lab, IISc. All rights reserved.</p>
+                <p>© 2026 Edge Intelligence Lab, IISc. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+    // The SVG is a same-origin object so its built-in CSS animation can be controlled.
+    (() => {
+        const object = document.getElementById('edge-research-animation');
+        const buttons = document.getElementById('edge-animation-buttons');
+        const pause = document.getElementById('edge-animation-pause');
+        const replay = document.getElementById('edge-animation-replay');
+        const complete = document.getElementById('edge-animation-complete');
+        const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        let svg;
+        function syncMotion() {
+            if (!svg) return;
+            if (motion.matches) {
+                svg.dataset.static = 'true';
+                pause.disabled = true;
+                replay.disabled = true;
+            } else {
+                replay.disabled = false;
+                // Keep a user-selected complete view until Replay is pressed.
+                pause.disabled = svg.dataset.static === 'true';
+            }
+        }
+        function initialize() {
+            try { svg = object.contentDocument && object.contentDocument.documentElement; }
+            catch (_) { return; }
+            if (!svg || svg.localName !== 'svg') return;
+            buttons.hidden = false;
+            syncMotion();
+        }
+        object.addEventListener('load', initialize);
+        initialize();
+        pause.addEventListener('click', () => {
+            if (!svg) return;
+            const paused = svg.dataset.paused !== 'true';
+            svg.dataset.paused = String(paused);
+            pause.textContent = paused ? 'Resume animation' : 'Pause animation';
+            pause.setAttribute('aria-pressed', String(paused));
+        });
+        replay.addEventListener('click', () => {
+            if (!svg || motion.matches) return;
+            svg.dataset.static = 'true';
+            void svg.getBoundingClientRect();
+            delete svg.dataset.static;
+            delete svg.dataset.paused;
+            pause.disabled = false;
+            pause.textContent = 'Pause animation';
+            pause.setAttribute('aria-pressed', 'false');
+        });
+        complete.addEventListener('click', () => {
+            if (!svg) return;
+            svg.dataset.static = 'true';
+            pause.disabled = true;
+        });
+        motion.addEventListener('change', syncMotion);
+    })();
+    </script>
+
 </body>
 </html>
+
