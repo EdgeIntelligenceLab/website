@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- EDGE Lab updated version: 2026-10-02 16:00 IST -->
 <html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRXC3E1PDR"></script>
@@ -11,8 +12,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edge Intelligence Lab | IISc Bangalore</title>
-    <meta name="description" content="Edge Intelligence Lab at IISc Bangalore: edge and embedded AI, efficient AI, and distributed and collaborative intelligence for real-world cyber-physical systems.">
+    <title>Edge Intelligence Lab | Indian Institute of Science</title>
+    <meta name="description" content="Edge Intelligence Lab at the Indian Institute of Science: edge and embedded AI, efficient AI, and distributed and collaborative intelligence for real-world cyber-physical systems.">
     
     <link rel="icon" href="assets/img/favicon.png">
     
@@ -25,22 +26,49 @@
 
     <!-- Page-specific additions: no changes to styles.css are required. -->
     <style>
+        /* Figure palette: navy identity; blue, gold and green research accents. */
+        :root {
+            --edge-navy: #12344D;
+            --edge-blue: #287FA8;
+            --edge-gold: #BD9137;
+            --edge-green: #43866A;
+            --primary: #24678B;
+            --primary-dark: #12344D;
+            --secondary: #43866A;
+            --accent: #24678B;
+            --bg-dark: #102f4b;
+        }
+        [data-theme="dark"] {
+            --primary: #8bcbea;
+            --primary-dark: #b7def2;
+            --secondary: #8fd0aa;
+            --accent: #24678B;
+            --bg-dark: #0b253b;
+        }
+        .lab-logo-text { gap: 6px; }
+        .brand-aim { color: var(--edge-navy); }
+        .brand-lab { color: var(--edge-navy); font-weight: 500; }
+        [data-theme="dark"] .brand-aim, [data-theme="dark"] .brand-lab { color: #d9eaf8; }
+        .hero { background: radial-gradient(ellipse at top, #245b79 0%, #12344D 55%, #102f4b 100%); }
+        .hero-aim { color: #ffffff; text-shadow: none; }
+        .hero-lab { color: #c6e2ef; }
+        .hero h1 { color: #ffffff; }
+        .hero-subtitle { color: #d9eaf8; }
+        .hero .btn-primary { background: #c6e2ef; color: #12344D; }
+        .hero .btn-primary:hover { background: #e1f0f7; box-shadow: 0 10px 20px rgba(0, 0, 0, .18); }
+        .hero .btn-outline { border-color: #a8c9da; color: #ffffff; }
+        .hero .btn-outline:hover { background: #ffffff; color: #12344D; }
+        .hero-brand::after { content: ''; display: block; width: 96px; height: 4px; border-radius: 4px; margin: 22px auto; background: linear-gradient(to right, var(--edge-blue) 0% 33.33%, var(--edge-gold) 33.33% 66.66%, var(--edge-green) 66.66% 100%); }
+
         .edge-hero-tagline { color: #d9eaf8; font-size: clamp(1.1rem, 2.5vw, 1.5rem); margin-bottom: 20px; }
         .hero { padding-bottom: 60px; }
         .hero-cta { flex-wrap: wrap; }
         .edge-vision-intro { max-width: 900px; margin: 0 auto 32px; text-align: center; font-size: 1.05rem; }
         .edge-research-figure { max-width: 1000px; margin: 0 auto; }
         .edge-research-animation { display: block; width: 100%; height: auto; aspect-ratio: 1; background: white; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); }
-        .edge-research-animation img { display: block; width: 100%; height: auto; }
-        .edge-research-figure figcaption { text-align: center; margin-top: 16px; }
-        .edge-figure-controls { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin-top: 18px; }
-        #edge-animation-buttons:not([hidden]) { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-        .edge-figure-controls button, .edge-figure-controls a { font: inherit; font-size: .9rem; padding: 10px 16px; border: 1px solid var(--primary); border-radius: 8px; background: var(--card-bg); color: var(--text-dark); text-decoration: none; cursor: pointer; }
-        .edge-figure-controls button:disabled { opacity: .55; cursor: default; }
-        .edge-figure-controls button:focus-visible, .edge-figure-controls a:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
-        .edge-pillar-blue { --pillar-color: #3182b2; }
-        .edge-pillar-gold { --pillar-color: #aa7c21; }
-        .edge-pillar-green { --pillar-color: #38856b; }
+        .edge-pillar-blue { --pillar-color: #287FA8; }
+        .edge-pillar-gold { --pillar-color: #946D20; }
+        .edge-pillar-green { --pillar-color: #43866A; }
         #themes .feature__item { border-top: 4px solid var(--pillar-color); }
         #themes .feature__item-teaser i, #themes .feature__item:hover .feature__item-teaser i { color: var(--pillar-color); }
         #themes .archive__item-excerpt p + p { margin-top: 12px; }
@@ -55,14 +83,35 @@
         @media (prefers-reduced-motion: reduce) {
             .feature__item, .feature__item-teaser i { animation: none !important; transition: none !important; }
         }
+
+        :root { --bg-light: #F7F9FC; --text-dark: #12344D; --text-light: #374151; }
+        [data-theme="dark"] { --bg-light: #142736; --text-dark: #F7F9FC; --text-light: #CFDBE4; }
+        .edge-logo-icon { display: block; width: 56px; height: 38px; object-fit: contain; flex-shrink: 0; filter: brightness(0) saturate(100%) invert(16%) sepia(21%) saturate(1735%) hue-rotate(160deg) brightness(96%) contrast(95%); }
+        [data-theme="dark"] .edge-logo-icon { filter: brightness(0) invert(1); }
+        .hero-brand { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; font-size: clamp(2.6rem, 5vw, 4rem); letter-spacing: -1px; }
+        .edge-hero-icon { width: 100px; height: 68px; object-fit: contain; margin-right: 8px; }
+        .hero-brand { position: relative; padding-bottom: 24px; margin-bottom: 18px; }
+        .hero-brand::after { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); margin: 0; }
+        /* Keep the figure fully visible on typical desktop screens. */
+        .edge-research-figure { width: min(100%, 720px, calc(100vh - 160px)); width: min(100%, 720px, calc(100svh - 160px)); margin: 0 auto; }
+        .edge-research-animation { width: 100%; height: auto; box-shadow: none; }
+        .edge-vision .section-title { margin-bottom: 24px; }
+        .edge-vision-intro { margin-bottom: 24px; }
+        @media (max-width: 600px) {
+            .edge-research-figure { width: 100%; }
+            .edge-logo-icon { width: 46px; height: 32px; }
+            .edge-hero-icon { width: 76px; height: 52px; }
+            .hero-brand::after { display: none; }
+        }
     </style>
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <div class="nav-brand">
-                <img src="assets/img/iisc-logo.png" alt="IISc Logo" class="nav-logo">
-                <a href="#home" class="lab-logo-text">
+                
+                <a href="#home" class="lab-logo-text" aria-label="Edge Intelligence Lab home">
+                    <img src="data:image/png;base64,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" alt="" class="edge-logo-icon">
                     <span class="brand-aim">EDGE</span><span class="brand-lab">Lab</span>
                 </a>
             </div>
@@ -97,11 +146,12 @@
         <div class="hero-particles"></div>
         <div class="hero-content">
             <div class="hero-brand" aria-hidden="true">
+                <img src="data:image/png;base64,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" alt="" class="edge-hero-icon">
                 <span class="hero-aim">EDGE</span><span class="hero-lab">Lab</span>
             </div>
             <h1>Edge Intelligence Lab</h1>
             <p class="edge-hero-tagline">Intelligent, Efficient, and Distributed AI at the Edge</p>
-            <p class="hero-subtitle">Department of Cyber Physical Systems &amp;<br>Robert Bosch Centre for Cyber-Physical Systems, IISc Bangalore</p>
+            <p class="hero-subtitle">Department of Cyber Physical Systems<br>Indian Institute of Science</p>
             
 <div class="hero-cta">
                 <a href="#themes" class="btn btn-primary">
@@ -126,23 +176,10 @@
             </div>
             <p class="edge-vision-intro">The Edge Intelligence Lab develops intelligent, efficient, and distributed AI systems that operate closer to where data is generated. Our research spans edge and embedded AI, efficient AI, and distributed and collaborative intelligence, with applications in energy and buildings, cities and the environment, mobility, and agriculture.</p>
             <figure class="edge-research-figure">
-                <object id="edge-research-animation" class="edge-research-animation"
-                        data="assets/img/edge-lab-animation.svg" type="image/svg+xml"
-                        width="1254" height="1254"
-                        aria-label="Edge Intelligence Lab research ecosystem" aria-describedby="edge-figure-caption">
-                    <img src="assets/img/edge-lab-animation.svg" width="1254" height="1254"
-                         alt="Edge Intelligence Lab: Edge and Embedded AI, Efficient AI, and Distributed and Collaborative AI; research subareas; applications in energy, buildings, cities, environment, agriculture, and mobility.">
-                </object>
-                <figcaption id="edge-figure-caption">From intelligence at the source to real-world impact.</figcaption>
+                <img id="edge-research-animation" class="edge-research-animation"
+                     src="assets/img/edge-lab-animation.svg" width="1254" height="1254"
+                     alt="Edge Intelligence Lab: Edge and Embedded AI, Efficient AI, and Distributed and Collaborative AI; their research subareas; and applications in energy, buildings, cities, environment, agriculture, and mobility.">
             </figure>
-            <div class="edge-figure-controls" role="group" aria-label="Research animation controls">
-                <span id="edge-animation-buttons" hidden>
-                    <button type="button" id="edge-animation-pause" aria-pressed="false">Pause animation</button>
-                    <button type="button" id="edge-animation-replay">Replay</button>
-                    <button type="button" id="edge-animation-complete">Show complete figure</button>
-                </span>
-                <a href="assets/img/edge-lab-animation.svg" target="_blank" rel="noopener">Open larger figure <i class="ri-external-link-line" aria-hidden="true"></i></a>
-            </div>
         </div>
     </section>
 
@@ -637,63 +674,7 @@ Therefore, in this paper, we analyze the applicability and performance of Time S
 
     <script src="script.js"></script>
 
-    <script>
-    // The SVG is a same-origin object so its built-in CSS animation can be controlled.
-    (() => {
-        const object = document.getElementById('edge-research-animation');
-        const buttons = document.getElementById('edge-animation-buttons');
-        const pause = document.getElementById('edge-animation-pause');
-        const replay = document.getElementById('edge-animation-replay');
-        const complete = document.getElementById('edge-animation-complete');
-        const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-        let svg;
-        function syncMotion() {
-            if (!svg) return;
-            if (motion.matches) {
-                svg.dataset.static = 'true';
-                pause.disabled = true;
-                replay.disabled = true;
-            } else {
-                replay.disabled = false;
-                // Keep a user-selected complete view until Replay is pressed.
-                pause.disabled = svg.dataset.static === 'true';
-            }
-        }
-        function initialize() {
-            try { svg = object.contentDocument && object.contentDocument.documentElement; }
-            catch (_) { return; }
-            if (!svg || svg.localName !== 'svg') return;
-            buttons.hidden = false;
-            syncMotion();
-        }
-        object.addEventListener('load', initialize);
-        initialize();
-        pause.addEventListener('click', () => {
-            if (!svg) return;
-            const paused = svg.dataset.paused !== 'true';
-            svg.dataset.paused = String(paused);
-            pause.textContent = paused ? 'Resume animation' : 'Pause animation';
-            pause.setAttribute('aria-pressed', String(paused));
-        });
-        replay.addEventListener('click', () => {
-            if (!svg || motion.matches) return;
-            svg.dataset.static = 'true';
-            void svg.getBoundingClientRect();
-            delete svg.dataset.static;
-            delete svg.dataset.paused;
-            pause.disabled = false;
-            pause.textContent = 'Pause animation';
-            pause.setAttribute('aria-pressed', 'false');
-        });
-        complete.addEventListener('click', () => {
-            if (!svg) return;
-            svg.dataset.static = 'true';
-            pause.disabled = true;
-        });
-        motion.addEventListener('change', syncMotion);
-    })();
-    </script>
-
 </body>
 </html>
+
 
