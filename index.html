@@ -131,6 +131,17 @@
             .edge-final-hero-logo { width: 72px; height: 72px; }
             .edge-final-hero-backdrop { opacity: .08; inset: 24px 12px; background-size: contain; background-image: url('assets/img/edge-hero-three-themes-mobile.svg'); }
         }
+
+        /* Figure-led hero: identity lives inside the central circle. */
+        .edge-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+        .hero { min-height: 680px; height: min(820px, calc(100svh - 80px)); padding: 0; }
+        .edge-final-hero-backdrop { inset: 8px; opacity: .85; background-size: contain; }
+        .hero-scroll-indicator { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); z-index: 2; }
+        .hero-scroll-indicator a { color: white; }
+        @media (max-width: 600px) {
+            .hero { min-height: 440px; height: 78svh; max-height: 650px; }
+            .edge-final-hero-backdrop { inset: 6px; opacity: .9; background-image: url('assets/img/edge-hero-three-themes.svg'); background-size: contain; }
+        }
     </style>
 </head>
 <body>
@@ -170,24 +181,11 @@
         </div>
     </nav>
 
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-label="Edge Intelligence Lab research themes">
+        <h1 class="edge-visually-hidden">Edge Intelligence Lab</h1>
         <div class="edge-final-hero-backdrop" aria-hidden="true"></div>
-        <!-- Localized CSS glow replaces the full-background canvas animation. -->  
+        <!-- Localized CSS glow replaces the full-background canvas animation. -->
 
-        <div class="hero-content">
-            <h1>Edge Intelligence Lab</h1>
-            <p class="edge-hero-tagline">Intelligent, Efficient, and Distributed AI at the Edge</p>
-            <p class="hero-subtitle">Department of Cyber Physical Systems<br>Indian Institute of Science</p>
-            
-<div class="hero-cta">
-                <a href="#themes" class="btn btn-primary">
-                    Explore Research <i class="ri-arrow-down-line" aria-hidden="true"></i>
-                </a>
-                <a href="#join" class="btn btn-outline">Join the Lab</a>
-            </div>
-
-
-        </div>
         <div class="hero-scroll-indicator">
             <a href="#about">
                 <i class="ri-arrow-down-line"></i>
