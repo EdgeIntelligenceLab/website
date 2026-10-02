@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- EDGE Lab final static logo and hero: 2026-10-02 17:46 IST -->
+<!-- EDGE Lab: consistent research themes and animated hero, 2026-10-02 -->
 <html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRXC3E1PDR"></script>
@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edge Intelligence Lab | Indian Institute of Science</title>
-    <meta name="description" content="Edge Intelligence Lab at the Indian Institute of Science: edge and embedded AI, efficient AI, and distributed and collaborative intelligence for real-world cyber-physical systems.">
+    <meta name="description" content="Edge Intelligence Lab at the Indian Institute of Science: embedded AI and TinyML, efficient AI, and distributed and collaborative AI for real-world cyber-physical systems.">
     
     <link rel="icon" href="assets/img/favicon.png">
     
@@ -26,121 +26,69 @@
 
     <!-- Page-specific additions: no changes to styles.css are required. -->
     <style>
-        /* Figure palette: navy identity; blue, gold and green research accents. */
+        /* EDGE Lab identity and research theme palette. */
         :root {
-            --edge-navy: #12344D;
-            --edge-blue: #287FA8;
-            --edge-gold: #BD9137;
-            --edge-green: #43866A;
-            --primary: #24678B;
-            --primary-dark: #12344D;
-            --secondary: #43866A;
-            --accent: #24678B;
-            --bg-dark: #102f4b;
+            --edge-navy: #12344D; --edge-blue: #287FA8;
+            --edge-green: #43866A; --edge-orange: #D98A32;
+            --primary: #287FA8; --primary-dark: #12344D;
+            --secondary: #43866A; --accent: #287FA8;
+            --bg-dark: #0D293D; --bg-light: #F7F9FC;
+            --text-dark: #12344D; --text-light: #374151;
         }
         [data-theme="dark"] {
-            --primary: #8bcbea;
-            --primary-dark: #b7def2;
-            --secondary: #8fd0aa;
-            --accent: #24678B;
-            --bg-dark: #0b253b;
+            --primary: #287FA8; --primary-dark: #FFFFFF;
+            --secondary: #43866A; --accent: #287FA8;
+            --bg-dark: #0D293D; --bg-light: #142736;
+            --text-dark: #F7F9FC; --text-light: #CFDBE4;
         }
         .lab-logo-text { gap: 6px; }
         .brand-aim { color: var(--edge-navy); }
         .brand-lab { color: #64748B; font-weight: 500; }
         [data-theme="dark"] .brand-aim { color: #FFFFFF; }
         [data-theme="dark"] .brand-lab { color: #CBD5E1; }
-        .hero { background: radial-gradient(ellipse at top, #245b79 0%, #12344D 55%, #102f4b 100%); }
-        .hero-aim { color: #ffffff; text-shadow: none; }
-        .hero-lab { color: #CBD5E1; font-weight: 500; }
-        .hero h1 { color: #ffffff; }
-        .hero-subtitle { color: #d9eaf8; }
-        .hero .btn-primary { background: #c6e2ef; color: #12344D; }
-        .hero .btn-primary:hover { background: #e1f0f7; box-shadow: 0 10px 20px rgba(0, 0, 0, .18); }
-        .hero .btn-outline { border-color: #a8c9da; color: #ffffff; }
-        .hero .btn-outline:hover { background: #ffffff; color: #12344D; }
-        .hero-brand::after { content: ''; display: block; width: 96px; height: 4px; border-radius: 4px; margin: 22px auto; background: linear-gradient(to right, var(--edge-blue) 0% 33.33%, var(--edge-gold) 33.33% 66.66%, var(--edge-green) 66.66% 100%); }
-
-        .edge-hero-tagline { color: #d9eaf8; font-size: clamp(1.1rem, 2.5vw, 1.5rem); margin-bottom: 20px; }
-        .hero { padding-bottom: 60px; }
-        .hero-cta { flex-wrap: wrap; }
-        .edge-vision-intro { max-width: 900px; margin: 0 auto 32px; text-align: center; font-size: 1.05rem; }
-        .edge-research-figure { max-width: 1000px; margin: 0 auto; }
-        .edge-research-animation { display: block; width: 100%; height: auto; aspect-ratio: 1; background: white; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); }
-        .edge-pillar-blue { --pillar-color: #287FA8; }
-        .edge-pillar-gold { --pillar-color: #946D20; }
-        .edge-pillar-green { --pillar-color: #43866A; }
-        #themes .feature__item { border-top: 4px solid var(--pillar-color); }
-        #themes .feature__item-teaser i, #themes .feature__item:hover .feature__item-teaser i { color: var(--pillar-color); }
-        #themes .archive__item-excerpt p + p { margin-top: 12px; }
-        [data-theme="dark"] .edge-pillar-blue { --pillar-color: #75c5ef; }
-        [data-theme="dark"] .edge-pillar-gold { --pillar-color: #eac66b; }
-        [data-theme="dark"] .edge-pillar-green { --pillar-color: #8fd0aa; }
-        @media (max-width: 600px) {
-            .edge-vision .section-title h2 { font-size: 1.8rem; }
-            .edge-vision-intro { font-size: .95rem; text-align: left; }
-            .edge-research-animation { border-radius: 8px; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .feature__item, .feature__item-teaser i { animation: none !important; transition: none !important; }
-        }
-
-        :root { --bg-light: #F7F9FC; --text-dark: #12344D; --text-light: #374151; }
-        [data-theme="dark"] { --bg-light: #142736; --text-dark: #F7F9FC; --text-light: #CFDBE4; }
-        .edge-logo-icon { display: block; width: 56px; height: 38px; object-fit: contain; flex-shrink: 0; filter: brightness(0) saturate(100%) invert(16%) sepia(21%) saturate(1735%) hue-rotate(160deg) brightness(96%) contrast(95%); }
-        [data-theme="dark"] .edge-logo-icon { filter: brightness(0) invert(1); }
-        .hero-brand { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; font-size: clamp(2.6rem, 5vw, 4rem); letter-spacing: -1px; }
-        .edge-hero-icon { width: 100px; height: 68px; object-fit: contain; margin-right: 8px; }
-        .hero-brand { position: relative; padding-bottom: 24px; margin-bottom: 18px; }
-        .hero-brand::after { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); margin: 0; }
-        /* Keep the figure fully visible on typical desktop screens. */
-        .edge-research-figure { width: min(100%, 720px, calc(100vh - 160px)); width: min(100%, 720px, calc(100svh - 160px)); margin: 0 auto; }
-        .edge-research-animation { width: 100%; height: auto; box-shadow: none; }
-        .edge-vision .section-title { margin-bottom: 24px; }
-        .edge-vision-intro { margin-bottom: 24px; }
-        @media (max-width: 600px) {
-            .edge-research-figure { width: 100%; }
-            .edge-logo-icon { width: 46px; height: 32px; }
-            .edge-hero-icon { width: 76px; height: 52px; }
-            .hero-brand::after { display: none; }
-        }
-
-        .edge-hero-symbol { position: relative; display: inline-flex; align-items: center; justify-content: center; isolation: isolate; }
-        .edge-hero-symbol::before { content: ''; position: absolute; width: 170px; height: 170px; border-radius: 50%; background: radial-gradient(circle, rgba(91, 181, 221, .32) 0%, rgba(65, 142, 176, .12) 45%, transparent 70%); z-index: -1; pointer-events: none; animation: edge-glow 10s ease-in-out infinite; }
-        .edge-hero-icon { position: relative; z-index: 1; }
-        @keyframes edge-glow { 0%, 100% { transform: scale(.9); opacity: .45; } 50% { transform: scale(1.15); opacity: .85; } }
-        @media (prefers-reduced-motion: reduce) { .edge-hero-symbol::before { animation: none; transform: none; opacity: .6; } }
-
-        /* Final static logo and oversized three-theme hero background. */
         .edge-final-nav-logo { display: block; width: 44px; height: 44px; flex-shrink: 0; }
         .edge-logo-dark { display: none; }
         [data-theme="dark"] .edge-logo-light { display: none; }
         [data-theme="dark"] .edge-logo-dark { display: block; }
-        .brand-aim { color: #12344D; } .brand-lab { color: #64748B; font-weight: 500; }
-        [data-theme="dark"] .brand-aim { color: white; }
-        [data-theme="dark"] .brand-lab { color: #CBD5E1; }
-        .hero { isolation: isolate; background: radial-gradient(ellipse at top, #245B79, #12344D 55%, #102F4B); }
-        .edge-final-hero-backdrop { position: absolute; inset: 28px 20px; z-index: 0; pointer-events: none; background: url('assets/img/edge-hero-three-themes.svg') center center / contain no-repeat; opacity: .12; }
-        .hero-content { position: relative; z-index: 2; }
-        .edge-final-hero-logo { display: block; width: 96px; height: 96px; margin-right: 8px; flex-shrink: 0; }
-        .hero-aim, .hero-lab, .hero h1, .hero-subtitle, .edge-hero-tagline { color: #FFFFFF; }
-        .hero-brand::after, .edge-hero-symbol::before { display: none; animation: none; }
-        .hero-brand { padding-bottom: 0; }
+        .hero {
+            isolation: isolate; position: relative;
+            background: radial-gradient(ellipse at center, #12344D 0%, #0D293D 100%);
+            min-height: 680px; height: min(820px, calc(100svh - 80px)); padding: 0;
+        }
+        .edge-final-hero-backdrop {
+            position: absolute; inset: 8px; z-index: 0; pointer-events: none;
+            background: url('assets/img/edge-hero-three-themes.svg') center / contain no-repeat; opacity: 1;
+        }
+        .edge-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+        .hero-scroll-indicator { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); z-index: 2; }
+        .hero-scroll-indicator a { color: #FFFFFF; }
+        .edge-vision-intro { max-width: 900px; margin: 0 auto 24px; text-align: center; font-size: 1.05rem; }
+        .edge-vision .section-title { margin-bottom: 24px; }
+        .edge-research-figure { width: min(100%, 720px, calc(100svh - 160px)); margin: 0 auto; }
+        .edge-research-animation { display: block; width: 100%; height: auto; aspect-ratio: 1; background: white; border-radius: 16px; overflow: hidden; }
+        .edge-pillar-blue { --pillar-color: var(--edge-blue); }
+        .edge-pillar-green { --pillar-color: var(--edge-green); }
+        .edge-pillar-orange { --pillar-color: var(--edge-orange); }
+        #themes .feature__item { border-top: 4px solid var(--pillar-color); }
+        #themes .feature__item-teaser i, #themes .feature__item:hover .feature__item-teaser i { color: var(--pillar-color); }
+        #themes .archive__item-title { color: var(--text-dark); }
+        #themes .archive__item-excerpt { color: var(--text-light); }
+        #themes .archive__item-excerpt p + p { margin-top: 12px; }
+        .section-title h2, .section-subtitle h3 { color: var(--text-dark); }
+        #themes .method-card { border-top: 3px solid var(--topic-color, var(--edge-blue)); }
+        #themes .method-icon, #themes .method-icon i { color: var(--topic-color, var(--edge-blue)); }
+        a:focus-visible, button:focus-visible { outline: 3px solid var(--edge-blue); outline-offset: 4px; }
         @media (max-width: 600px) {
             .edge-final-nav-logo { width: 38px; height: 38px; }
-            .edge-final-hero-logo { width: 72px; height: 72px; }
-            .edge-final-hero-backdrop { opacity: .08; inset: 24px 12px; background-size: contain; background-image: url('assets/img/edge-hero-three-themes-mobile.svg'); }
-        }
-
-        /* Figure-led hero: identity lives inside the central circle. */
-        .edge-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
-        .hero { min-height: 680px; height: min(820px, calc(100svh - 80px)); padding: 0; }
-        .edge-final-hero-backdrop { inset: 8px; opacity: .85; background-size: contain; }
-        .hero-scroll-indicator { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); z-index: 2; }
-        .hero-scroll-indicator a { color: white; }
-        @media (max-width: 600px) {
             .hero { min-height: 440px; height: 78svh; max-height: 650px; }
-            .edge-final-hero-backdrop { inset: 6px; opacity: .9; background-image: url('assets/img/edge-hero-three-themes.svg'); background-size: contain; }
+            .edge-final-hero-backdrop { inset: 6px; }
+            .edge-vision .section-title h2 { font-size: 1.8rem; }
+            .edge-vision-intro { font-size: .95rem; text-align: left; }
+            .edge-research-figure { width: 100%; }
+            .edge-research-animation { border-radius: 8px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .feature__item, .feature__item-teaser i { animation: none !important; transition: none !important; }
         }
     </style>
 </head>
@@ -198,34 +146,34 @@
             <div class="section-title">
                 <h2>Edge Intelligence: Algorithms to Impact</h2>
             </div>
-            <p class="edge-vision-intro">The Edge Intelligence Lab develops intelligent, efficient, and distributed AI systems that operate closer to where data is generated. Our research spans edge and embedded AI, efficient AI, and distributed and collaborative intelligence, with applications in energy and buildings, cities and the environment, mobility, and agriculture.</p>
+            <p class="edge-vision-intro">The Edge Intelligence Lab develops intelligent, efficient, and distributed AI systems that operate closer to where data is generated. Our research spans embedded AI and TinyML, efficient AI, and distributed and collaborative AI, with applications in energy and buildings, precision agriculture, cities and the environment, and mobility and transportation.</p>
             <figure class="edge-research-figure">
                 <img id="edge-research-animation" class="edge-research-animation"
                      src="assets/img/edge-lab-animation.svg" width="1254" height="1254"
-                     alt="Edge Intelligence Lab: Edge and Embedded AI, Efficient AI, and Distributed and Collaborative AI; their research subareas; and applications in energy, buildings, cities, environment, agriculture, and mobility.">
+                     alt="Edge Intelligence Lab: Embedded AI and TinyML, Efficient AI, and Distributed and Collaborative AI; their research subareas; and applications in energy and buildings, precision agriculture, cities and the environment, and mobility and transportation.">
             </figure>
         </div>
     </section>
 
     <section id="themes" class="section-padding bg-alt">
         <div class="container">
-            <div class="section-title"><h2>Three Research Pillars</h2></div>
+            <div class="section-title"><h2>Research Themes</h2></div>
             <div class="feature__wrapper">
                 <div class="feature__item edge-pillar-blue">
                     <div class="feature__item-teaser"><i class="fas fa-microchip" aria-hidden="true"></i></div>
                     <div class="feature__item-body">
-                        <h2 class="archive__item-title">Edge / Embedded AI</h2>
+                        <h2 class="archive__item-title">Embedded AI &amp; TinyML</h2>
                         <div class="archive__item-excerpt"><p><strong>Intelligence at the Source</strong></p><p>TinyML · On-sensor AI · Embedded AI · Edge Agents · Real-time AI Systems</p></div>
                     </div>
                 </div>
-                <div class="feature__item edge-pillar-gold">
+                <div class="feature__item edge-pillar-green">
                     <div class="feature__item-teaser"><i class="fas fa-leaf" aria-hidden="true"></i></div>
                     <div class="feature__item-body">
                         <h2 class="archive__item-title">Efficient AI</h2>
-                        <div class="archive__item-excerpt"><p><strong>More Intelligence with Less Resources</strong></p><p>Model Compression · Quantization · Pruning · Energy-efficient Inference · Small Foundation Models · Efficient Training &amp; Deployment</p></div>
+                        <div class="archive__item-excerpt"><p><strong>More Intelligence with Fewer Resources</strong></p><p>Model Compression · Quantization · Pruning · Energy-efficient Inference · Small Foundation Models · Efficient Training &amp; Deployment</p></div>
                     </div>
                 </div>
-                <div class="feature__item edge-pillar-green">
+                <div class="feature__item edge-pillar-orange">
                     <div class="feature__item-teaser"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
                     <div class="feature__item-body">
                         <h2 class="archive__item-title">Distributed &amp; Collaborative AI</h2>
@@ -235,12 +183,12 @@
             </div>
             <div class="section-subtitle"><h3>Research Topics</h3><p>Algorithms, models, and systems for intelligence across resource-constrained and distributed platforms.</p></div>
             <div class="methodology-grid">
-                <div class="method-card"><div class="method-icon"><i class="fas fa-microchip" aria-hidden="true"></i></div><h4>Edge AI Systems</h4></div>
-                <div class="method-card"><div class="method-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div><h4>Time Series Foundation Models</h4></div>
-                <div class="method-card"><div class="method-icon"><i class="fas fa-share-nodes" aria-hidden="true"></i></div><h4>Federated &amp; Distributed Learning</h4></div>
-                <div class="method-card"><div class="method-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div><h4>Efficient Foundation Models</h4></div>
-                <div class="method-card"><div class="method-icon"><i class="fas fa-camera" aria-hidden="true"></i></div><h4>Embedded &amp; In-Sensor AI</h4></div>
-                <div class="method-card"><div class="method-icon"><i class="fas fa-robot" aria-hidden="true"></i></div><h4>Agentic AI at the Edge</h4></div>
+                <div class="method-card" style="--topic-color: var(--edge-blue)"><div class="method-icon"><i class="fas fa-microchip" aria-hidden="true"></i></div><h4>Edge AI Systems</h4></div>
+                <div class="method-card" style="--topic-color: var(--edge-blue)"><div class="method-icon"><i class="fas fa-chart-line" aria-hidden="true"></i></div><h4>Time Series Foundation Models</h4></div>
+                <div class="method-card" style="--topic-color: var(--edge-orange)"><div class="method-icon"><i class="fas fa-share-nodes" aria-hidden="true"></i></div><h4>Federated &amp; Distributed Learning</h4></div>
+                <div class="method-card" style="--topic-color: var(--edge-green)"><div class="method-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div><h4>Efficient Foundation Models</h4></div>
+                <div class="method-card" style="--topic-color: var(--edge-blue)"><div class="method-icon"><i class="fas fa-camera" aria-hidden="true"></i></div><h4>Embedded &amp; In-Sensor AI</h4></div>
+                <div class="method-card" style="--topic-color: var(--edge-blue)"><div class="method-icon"><i class="fas fa-robot" aria-hidden="true"></i></div><h4>Agentic AI at the Edge</h4></div>
             </div>
         </div>
     </section>
@@ -583,7 +531,7 @@ Therefore, in this paper, we analyze the applicability and performance of Time S
             </div>
             <div class="join-wrapper">
                 <div class="join-info">
-                    <p class="join-intro">We are actively looking for highly motivated candidates to join the <strong>Edge Intelligence Lab</strong> at RBCCPS, IISc.</p>
+                    <p class="join-intro">We are actively looking for highly motivated candidates to join the <strong>Edge Intelligence Lab</strong> at the Indian Institute of Science.</p>
                     <div class="opening-card">
                         <h4><i class="fas fa-laptop-code"></i> Project Staff / Research Associates</h4>
                         <p>We frequently look for project staff to assist with ongoing research.</p>
@@ -601,7 +549,7 @@ Therefore, in this paper, we analyze the applicability and performance of Time S
                     </div>
                     <div class="opening-card">
                         <h4><i class="fas fa-flask"></i> Postdoctoral Fellows</h4>
-                        <p>We welcome applications from prospective postdoctoral fellows with a strong publication record in CPS or Energy Analytics.</p>
+                        <p>We welcome applications from prospective postdoctoral fellows with a strong publication record in edge AI, efficient AI, distributed learning, or cyber-physical systems.</p>
                     </div>
                 </div>
                 <div class="apply-box">
@@ -700,5 +648,4 @@ Therefore, in this paper, we analyze the applicability and performance of Time S
 
 </body>
 </html>
-
 
