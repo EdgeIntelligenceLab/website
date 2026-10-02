@@ -1,24 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" fill="none" aria-hidden="true">
 
-<g stroke="white" stroke-width="2">
-<circle cx="450" cy="450" r="395" opacity=".3" stroke-dasharray="3 12" />
-<circle cx="450" cy="450" r="335" opacity=".4" />
+<style>
+.hero-theme-icon { animation: theme-breathe 12s ease-in-out infinite; }
+.icon-1 { animation-delay: -4s; } .icon-2 { animation-delay: -8s; }
+@keyframes theme-breathe { 0%,100% { opacity: .78; } 40%,60% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .hero-theme-icon { animation: none; opacity: 1; } }
+</style><g stroke="white" stroke-width="2">
+<circle cx="450" cy="450" r="410" opacity=".3" stroke-dasharray="3 12" />
+<circle cx="450" cy="450" r="355" opacity=".4" />
 <circle cx="450" cy="450" r="140" opacity=".5" />
 </g>
 <g opacity="1" stroke="white" stroke-linecap="round" stroke-linejoin="round">
-<path d="M450 115 A335 335 0 0 0 160 617 L329 520 A140 140 0 0 1 450 310 Z" fill="white" fill-opacity=".025" stroke-width="2" opacity=".35" />
-<g transform="translate(267 297)" stroke-width="4" stroke="#7CC4E8"><rect x="-30" y="-30" width="60" height="60" rx="6" /><path d="M-18 -43V-31 M0 -43V-31 M18 -43V-31 M-18 31V43 M0 31V43 M18 31V43 M-43 -18H-31 M-43 0H-31 M-43 18H-31 M31 -18H43 M31 0H43 M31 18H43" /><rect x="-15" y="-15" width="30" height="30" rx="3" /></g>
+<path d="M450 95 A355 355 0 0 0 142.56 627.5 L329 520 A140 140 0 0 1 450 310 Z" fill="white" fill-opacity=".025" stroke-width="2" opacity=".35" />
+<g transform="translate(267 297)" stroke-width="4" stroke="#7CC4E8" class="hero-theme-icon icon-0"><rect x="-30" y="-30" width="60" height="60" rx="6" /><path d="M-18 -43V-31 M0 -43V-31 M18 -43V-31 M-18 31V43 M0 31V43 M18 31V43 M-43 -18H-31 M-43 0H-31 M-43 18H-31 M31 -18H43 M31 0H43 M31 18H43" /><rect x="-15" y="-15" width="30" height="30" rx="3" /></g>
 </g>
 <g opacity="1" stroke="white" stroke-linecap="round" stroke-linejoin="round">
-<path d="M450 115 A335 335 0 0 1 740 617 L571 520 A140 140 0 0 0 450 310 Z" fill="white" fill-opacity=".025" stroke-width="2" opacity=".35" />
-<g transform="translate(633 297)" stroke-width="4" stroke="#E6B56A"><circle r="27" /><circle r="12" /><path d="M0 -42V-28 M0 28V42 M-42 0H-28 M28 0H42 M-30 -30L-20 -20 M20 20L30 30 M30 -30L20 -20 M-20 20L-30 30" /><path d="M22 39 Q16 7 54 4 Q57 38 22 39 M22 39L43 19" fill="#12344D" /></g>
+<path d="M450 95 A355 355 0 0 1 757.44 627.5 L571 520 A140 140 0 0 0 450 310 Z" fill="white" fill-opacity=".025" stroke-width="2" opacity=".35" />
+<g transform="translate(633 297)" stroke-width="4" stroke="#8BC9A5" class="hero-theme-icon icon-1"><circle r="27" /><circle r="12" /><path d="M0 -42V-28 M0 28V42 M-42 0H-28 M28 0H42 M-30 -30L-20 -20 M20 20L30 30 M30 -30L20 -20 M-20 20L-30 30" /><path d="M22 39 Q16 7 54 4 Q57 38 22 39 M22 39L43 19" fill="#12344D" /></g>
 </g>
 <g opacity="1" stroke="white" stroke-linecap="round" stroke-linejoin="round">
-<path d="M160 617 A335 335 0 0 0 740 617 L571 520 A140 140 0 0 1 329 520 Z" fill="white" fill-opacity=".025" stroke-width="2" opacity=".35" />
-<g transform="translate(450 674)" stroke-width="4" stroke="#8BC9A5"><path d="M0 -30L-38 0 M0 -30L38 0 M-38 0L-38 38 M38 0L38 38 M-38 0L0 23 M38 0L0 23" /><g fill="#12344D"><circle cy="-30" r="9" /><circle cx="-38" r="9" /><circle cx="38" r="9" /><circle cx="-38" cy="38" r="9" /><circle cx="38" cy="38" r="9" /><circle cy="23" r="9" /></g></g>
+<path d="M142.56 627.5 A355 355 0 0 0 757.44 627.5 L571 520 A140 140 0 0 1 329 520 Z" fill="white" fill-opacity=".025" stroke-width="2" opacity=".35" />
+<g transform="translate(450 674)" stroke-width="4" stroke="#E6B56A" class="hero-theme-icon icon-2"><path d="M0 -30L-38 0 M0 -30L38 0 M-38 0L-38 38 M38 0L38 38 M-38 0L0 23 M38 0L0 23" /><g fill="#12344D"><circle cy="-30" r="9" /><circle cx="-38" r="9" /><circle cx="38" r="9" /><circle cx="-38" cy="38" r="9" /><circle cx="38" cy="38" r="9" /><circle cy="23" r="9" /></g></g>
 </g><g class="theme-labels" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle" opacity=".95">
-<text x="267" y="368" fill="#7CC4E8">Embedded AI</text>
-<text x="633" y="368" fill="#E6B56A">Efficient AI</text>
-<text x="450" y="750" fill="#8BC9A5">Distributed &amp;</text>
-<text x="450" y="780" fill="#8BC9A5">Collaborative AI</text>
+<text x="255" y="365" fill="#7CC4E8">Embedded AI</text>
+<text x="645" y="365" fill="#8BC9A5">Efficient AI</text>
+<text x="450" y="735" fill="#E6B56A">Distributed &amp;</text>
+<text x="450" y="767" fill="#E6B56A">Collaborative AI</text>
 </g><g fill="white" font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle"><text x="450" y="410" font-size="44">Edge</text><text x="450" y="464" font-size="44">Intelligence</text><text x="450" y="518" font-size="44">Lab</text></g></svg>
