@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- EDGE Lab final static logo and hero: 2026-10-02 17:37 IST -->
+<!-- EDGE Lab final static logo and hero: 2026-10-02 17:46 IST -->
 <html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRXC3E1PDR"></script>
@@ -120,7 +120,7 @@
         [data-theme="dark"] .brand-aim { color: white; }
         [data-theme="dark"] .brand-lab { color: #CBD5E1; }
         .hero { isolation: isolate; background: radial-gradient(ellipse at top, #245B79, #12344D 55%, #102F4B); }
-        .edge-final-hero-backdrop { position: absolute; inset: 0; z-index: 0; pointer-events: none; background: url('assets/img/edge-hero-three-themes.svg') center center / min(1200px, 150vw) auto no-repeat; opacity: .12; }
+        .edge-final-hero-backdrop { position: absolute; inset: 28px 20px; z-index: 0; pointer-events: none; background: url('assets/img/edge-hero-three-themes.svg') center center / contain no-repeat; opacity: .12; }
         .hero-content { position: relative; z-index: 2; }
         .edge-final-hero-logo { display: block; width: 96px; height: 96px; margin-right: 8px; flex-shrink: 0; }
         .hero-aim, .hero-lab, .hero h1, .hero-subtitle, .edge-hero-tagline { color: #FFFFFF; }
@@ -129,7 +129,7 @@
         @media (max-width: 600px) {
             .edge-final-nav-logo { width: 38px; height: 38px; }
             .edge-final-hero-logo { width: 72px; height: 72px; }
-            .edge-final-hero-backdrop { opacity: .08; background-size: 950px auto; }
+            .edge-final-hero-backdrop { opacity: .08; inset: 24px 12px; background-size: contain; background-image: url('assets/img/edge-hero-three-themes-mobile.svg'); }
         }
     </style>
 </head>
@@ -175,10 +175,6 @@
         <!-- Localized CSS glow replaces the full-background canvas animation. -->  
 
         <div class="hero-content">
-            <div class="hero-brand" aria-hidden="true">
-                <img src="assets/img/edge-lab-logo-white.svg" alt="" class="edge-final-hero-logo" width="96" height="96">
-                <span class="hero-aim">EDGE</span><span class="hero-lab">Lab</span>
-            </div>
             <h1>Edge Intelligence Lab</h1>
             <p class="edge-hero-tagline">Intelligent, Efficient, and Distributed AI at the Edge</p>
             <p class="hero-subtitle">Department of Cyber Physical Systems<br>Indian Institute of Science</p>
